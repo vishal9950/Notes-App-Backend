@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/server.js",
+    "start": "sequelize db:migrate && nodemon src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -16,6 +16,8 @@
   },
   "dependencies": {
     "hapi": "^16.6.2",
-    "sequelize": "^4.33.4"
+    "pg": "^7.4.1",
+    "sequelize": "^4.33.4",
+    "sequelize-cli": "^4.0.0"
   }
 }
