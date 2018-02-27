@@ -9,7 +9,7 @@ const handler = (request, response) => {
 
 const handler1 = (request, response) => {
   console.log('PUT /sync');
-  const notes = Object.values(request.payload);
+  const notes = request.payload;
   // console.log(notes);
   Models.notes.destroy({ truncate: true })
     .then(() => Models.notes.bulkCreate(notes))
